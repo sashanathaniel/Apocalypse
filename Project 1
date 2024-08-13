@@ -1,0 +1,21 @@
+SELECT Customer, [Units Sold], [Date Purchased]
+FROM ['Apocolypse Sales$']
+
+
+---Using JOIN to get Customer, Product Name and Price
+SELECT customer, [product name], price 
+FROM ['Apocolypse Sales$']
+JOIN ['Apocolypse Store$']
+on ['Apocolypse Sales$'].[Product ID] = ['Apocolypse Store$'].[Product ID]
+
+SELECT [Date Purchased], [Production Cost], [Order ID]
+FROM ['Apocolypse Sales$']
+JOIN ['Apocolypse Store$']
+ON ['Apocolypse Sales$'].[Product ID] = ['Apocolypse Store$'].[Product ID]
+
+
+---USING LEFT JOIN TO GET CUSTOMER, PRODUCT NAME AND DATE PURCHASED
+SELECT customer, [Product Name], [Date Purchased]
+FROM ['Apocolypse Sales$']
+RIGHT JOIN ['Apocolypse Store$']
+ON ['Apocolypse Sales$'].[Product ID] = ['Apocolypse Store$'].[Product ID]
